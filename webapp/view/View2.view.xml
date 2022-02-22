@@ -1,0 +1,33 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+          xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+          controllerName="hpc.sd.sales.controller.View2">
+    <!-- <Button text="Back" press="onBack"></Button> -->
+    <Page title="{PRODUCT_ID}" showNavButton="true" navButtonPress="onBack">
+        <content>
+            <ObjectHeader title="{NAME}" intro="{DESCRIPTION}" 
+            number="{PRICE}" numberUnit="{CURRENCY_CODE}" icon="{imageURL}"></ObjectHeader>
+            <IconTabBar>
+                <items>
+                    <!-- like a tab inside tab strip -->
+                    <IconTabFilter icon="sap-icon://information" text="More Info" key="idMore">
+                        <core:Fragment fragmentName="hpc.sd.sales.fragments.moreInfo" type="XML"></core:Fragment>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://supplier" text="Suppliers" key="idSuppliers">
+                        <core:Fragment fragmentName="hpc.sd.sales.fragments.suppliers" type="XML"></core:Fragment>
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://home" text="Cities" key="idCities">
+                        <core:Fragment fragmentName="hpc.sd.sales.fragments.cities" type="XML"></core:Fragment>
+                        <core:Fragment fragmentName="hpc.sd.sales.fragments.moreInfo" type="XML"></core:Fragment>
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Save" press="onSave" type="Accept" />
+                <Button text="Cancel" press="onCancel" type="Reject"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

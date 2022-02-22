@@ -1,0 +1,5 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+          controllerName="hpc.sd.sales.controller.App">
+    <!-- The App below is a Container Control which will contain other view-->
+    <SplitApp id="idAppCon"></SplitApp>
+</mvc:View>

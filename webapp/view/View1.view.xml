@@ -1,0 +1,53 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+          controllerName="hpc.sd.sales.controller.View1">
+    <!-- <Button text="Go to Next" press="onNext"></Button> -->
+    <Page title="View 1">
+        <headerContent>
+			<Button icon="sap-icon://action" tooltip="Go to Next view" press="onNext"/>
+		</headerContent>
+        <content>
+            <SearchField id="idSearch" search="onSearch"></SearchField>
+            <List id="idList" growing="true" growingThreshold="10" items="{
+                path: '/ProductSet'
+            }" mode="SingleSelectMaster" delete="onDelete" selectionChange="onItemSelect">
+                <items>
+                    <ObjectListItem title="{PRODUCT_ID} {NAME}" 
+                     intro="{CATEGORY}" number="{PRICE}" numberUnit="{CURRENCY_CODE}">
+                    </ObjectListItem>
+                    <!-- <DisplayListItem label="Apple" value="Best Antibiotic"></DisplayListItem>
+                    <StandardListItem icon="https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bananas-218094b-scaled.jpg" description="Good source of potasium" title="Banana" ></StandardListItem>
+                    <InputListItem>
+                        <HBox>
+                            <Text class="sapUiSmallMarginTop" text="How much Quantity we need?"></Text>
+                            <Input width="20%"></Input>
+                        </HBox>
+                    </InputListItem>
+                    <ObjectListItem title="Pineapple" icon="https://i0.wp.com/post.greatist.com/wp-content/uploads/sites/2/2021/07/369366-grt-Pineapple-Benefits-grt-1296x728-header_body.jpg" intro="Good for glowing skin"
+                                    number="100 INR" numberUnit="Pc."></ObjectListItem>
+                    <CustomListItem>
+                        <content>
+                            <VBox>
+                                <HBox>
+                                    <Switch text="Cash on delivery"></Switch>
+                                    <Button text="Aaya"></Button>    
+                                </HBox>
+                                <Button text="fresh Fruits"></Button>
+                            </VBox>
+                        </content>
+                    </CustomListItem>
+                    <FeedListItem sender="Mamta Banerjee" icon="https://upload.wikimedia.org/wikipedia/commons/4/49/Ms._Mamata_Banerjee%2C_in_Kolkata_on_July_17%2C_2018_%28cropped%29_%28cropped%29.JPG"
+                    text="Khela Hobe!!" 
+                    ></FeedListItem>
+                    <ActionListItem text="Order Now!!" press="onClick"></ActionListItem> -->
+                </items>
+            </List>
+
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button icon="sap-icon://add" press="onAdd"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

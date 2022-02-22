@@ -1,0 +1,100 @@
+{   
+    "version": "1.37.0",
+    "sap.app":{
+        "id": "hpc.sd.sales",
+        "type": "application",
+        "i18n":"i18n/i18n.properties",
+        "applicationVersion":"1.0.0",
+        "title":"{{appTitle}}",
+        "description":"{{appDescription}}",
+        "ach":"SD-SLS",
+        "dataSources":{
+            "anubhavService": {
+                "uri": "/sap/opu/odata/sap/ZHPC_XX_ODATA_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui":{
+        "technology": "UI5",
+        "deviceTypes": ["desktop","mobile","tablet"],
+        "fullWidth": true
+    },
+    "sap.ui5":{
+        "dependencies":{
+            "minUI5Version":"1.90.0",
+            "libs":{
+                "sap.m":{},
+                "sap.ui.layout": {}
+            }
+        },
+        "rootView": {
+            "viewName": "hpc.sd.sales.view.App",
+            "type": "XML",
+            "id": "idRootApp"
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "hpc.sd.sales.view",
+                "controlId": "idAppCon"
+            },
+            "routes": [{
+                "pattern": "",
+                "name": "home",
+                "target": ["donald", "modi"]
+            },{
+                "pattern": "fruits/{fruitId}",
+                "name": "detail",
+                "target": ["donald", "trumph"]
+            },{
+                "name": "addNew",
+                "pattern": "addNewProduct",
+                "target": ["donald", "putin"]
+            }],
+            "targets": {
+                "modi": {
+                    "viewId": "idEmpty",
+                    "viewName": "Empty",
+                    "controlAggregation": "detailPages"
+                },
+                "donald": {
+                    "viewId": "idView1",
+                    "viewName": "View1",
+                    "controlAggregation": "masterPages"
+                 },
+                 "trumph": {
+                    "viewId": "idView2",
+                    "viewName": "View2",
+                    "controlAggregation": "detailPages"
+                 },
+                 "putin": {
+                    "viewId": "idAdd",
+                    "viewName": "Add",
+                    "controlAggregation": "detailPages"
+                 }
+            }
+        },
+        "models":{
+            "":{
+                "type":"sap.ui.model.odata.v2.ODataModel",
+                "dataSource": "anubhavService"
+            },
+            "local":{
+              "type":"sap.ui.model.json.JSONModel",
+              "uri":"models/mockdata/fruits.json",
+              "settings":{
+
+              }  
+            },
+            "i18n":{
+                "type":"sap.ui.model.resource.ResourceModel",
+                "uri":"i18n/i18n.properties"
+            }
+        }
+    }
+}
