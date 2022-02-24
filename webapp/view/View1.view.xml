@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
           controllerName="hpc.sd.sales.controller.View1">
     <!-- <Button text="Go to Next" press="onNext"></Button> -->
-    <Page title="Products">
+    <Page title="Products - Aurnab">
         <headerContent>
 			<Button icon="sap-icon://action" tooltip="Go to Next view" press="onNext"/>
 		</headerContent>
