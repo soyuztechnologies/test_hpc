@@ -1,4 +1,6 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
           controllerName="hpc.sd.sales.controller.Empty">
-    <Image src="https://assets.telegraphindia.com/telegraph/2020/Jul/1593630212_b3f42f7f-d3e8-4939-b63e-c892fb3a5142-jpg"></Image>
+    <Page title="My Home">
+        <Image src="https://assets.telegraphindia.com/telegraph/2020/Jul/1593630212_b3f42f7f-d3e8-4939-b63e-c892fb3a5142-jpg"></Image>
+    </Page>
 </mvc:View>
