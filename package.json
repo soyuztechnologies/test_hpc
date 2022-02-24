@@ -11,7 +11,9 @@
   "dependencies": {
     "@sap/ux-ui5-tooling": "^1.4.7"
   },
-  "ui5":{
-    "dependencies":["@sap/ux-ui5-tooling"]
+  "ui5": {
+    "dependencies": [
+      "@sap/ux-ui5-tooling"
+    ]
   }
 }
